@@ -1,11 +1,11 @@
 import { io, Socket } from 'socket.io-client';
-import { SERVER_BASE_HOST, SOCKET_PATH } from '@hello/common';
+import { constant } from '@hello/common';
 
 export class WSManager {
   private socket: Socket | null = null;
 
   init() {
-    this.socket = io(SERVER_BASE_HOST, { path: SOCKET_PATH });
+    this.socket = io(constant.SERVER_BASE_HOST, { path: constant.SOCKET_PATH });
 
     this.socket.on('connect', () => {
       console.log('connect');

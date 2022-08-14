@@ -1,1 +1,3 @@
-export { SERVER_BASE_HOST, SOCKET_PATH, API_V1_PATH, SERVER_PORT, CLIENT_BASE_HOST } from './const';
+import constant from './constant';
+
+export { constant };

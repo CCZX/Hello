@@ -1,6 +1,6 @@
 import { SubscribeMessage, WebSocketGateway, WebSocketServer } from '@nestjs/websockets';
 import { Server, Socket } from 'socket.io';
-import { SOCKET_PATH, CLIENT_BASE_HOST } from '@hello/common';
+import { constant } from '@hello/common';
 
 @WebSocketGateway({
   path: '/socket.io',
