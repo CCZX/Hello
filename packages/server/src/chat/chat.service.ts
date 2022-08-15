@@ -3,8 +3,8 @@ import { Server, Socket } from 'socket.io';
 import { constant } from '@hello/common';
 
 @WebSocketGateway({
-  path: '/socket.io',
-  cors: { origin: 'http://localhost:3000' },
+  path: constant.SOCKET_PATH,
+  cors: { origin: constant.CLIENT_BASE_HOST },
 })
 export class ChatService {
   private socketIds: string[] = [];

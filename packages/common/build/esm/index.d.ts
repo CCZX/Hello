@@ -1,5 +1,3 @@
 import constant from './constant';
-
 export { constant };
-
-export const a = 1;
+export declare const a = 1;

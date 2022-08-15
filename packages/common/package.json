@@ -2,9 +2,12 @@
   "name": "@hello/common",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.ts",
+  "main": "build/cjs/index.js",
+  "module": "build/esm/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "build:esm && build:cjs",
+    "build:esm": "node ./scripts/esm.js && tsc",
+    "build:cjs": "node ./scripts/cjs.js && tsc"
   },
   "author": "chenchao",
   "license": "ISC"

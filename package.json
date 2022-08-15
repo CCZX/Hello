@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "12.22.0",
+    "pnpm": "6.32.21"
+  },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev:client": "cd packages/client && pnpm run dev",
