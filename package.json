@@ -11,6 +11,10 @@
     "preinstall": "npx only-allow pnpm",
     "dev:client": "cd packages/client && pnpm run dev",
     "dev:server": "cd packages/server && pnpm run start:dev",
+    "build:common": "cd packages/common && pnpm run build",
+    "build:client": "",
+    "build:server": "",
+    "clean:node_modules": "rm -rf node_modules **/*/node_modules",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "author": "chenchao",

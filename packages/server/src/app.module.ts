@@ -1,11 +1,34 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { ConfigService, ConfigModule } from '@nestjs/config';
 import { ChatModule } from './chat/chat.module';
 
+const libModules = [
+  ConfigModule.forRoot({
+    envFilePath: ['.env'],
+  }),
+  TypeOrmModule.forRootAsync({
+    imports: [ConfigModule],
+    inject: [ConfigService],
+    useFactory: (configService: ConfigService) => {
+      return {
+        type: 'mysql',
+        // .env 获取
+        host: configService.get('DB_HOST', 'localhost'), // 主机，默认为localhost
+        port: configService.get<number>('DB_PORT', 3306), // 端口号
+        username: configService.get('DB_USER', 'chenchao'), // 用户名
+        password: configService.get('DB_PASSWORD', '123456'), // 密码
+        database: configService.get('DB_DATABASE', 'Hello'), //数据库名
+        // entities
+        entities: ['dist/**/*.entity{.ts,.js}'],
+      };
+    },
+  }),
+];
+
 @Module({
-  imports: [ChatModule],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [...libModules, ChatModule],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
