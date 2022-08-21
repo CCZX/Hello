@@ -5,7 +5,7 @@
   "main": "build/cjs/index.js",
   "module": "build/esm/index.js",
   "scripts": {
-    "build": "build:esm && build:cjs",
+    "build": "pnpm build:esm && pnpm build:cjs",
     "build:esm": "node ./scripts/esm.js && tsc",
     "build:cjs": "node ./scripts/cjs.js && tsc"
   },
