@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigService, ConfigModule } from '@nestjs/config';
 import { ChatModule } from './chat/chat.module';
+import { UserModule } from './modules/user/user.module';
 
 const libModules = [
   ConfigModule.forRoot({
@@ -21,13 +22,16 @@ const libModules = [
         database: configService.get('DB_DATABASE', 'Hello'), //数据库名
         // entities
         entities: ['dist/**/*.entity{.ts,.js}'],
+        synchronize: true,
       };
     },
   }),
 ];
 
+const businessModules = [ChatModule, UserModule];
+
 @Module({
-  imports: [...libModules, ChatModule],
+  imports: [...libModules, ...businessModules],
   controllers: [],
   providers: [],
 })
