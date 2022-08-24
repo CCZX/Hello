@@ -5,6 +5,9 @@ export class UserEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
+  @Column({ unique: true })
+  account: string; // 唯一，使用 account 登录
+
   @Column({ length: 10 })
   name: string;
 

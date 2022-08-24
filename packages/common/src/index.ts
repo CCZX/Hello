@@ -10,3 +10,14 @@ export enum AddUserTypeEnum {
   QRCode = 3, // 扫描二维码
   recommend = 4, // 其他好友推荐
 }
+
+// ===== dto start... =====
+
+interface CreateUserDTO {
+  account: string;
+  name: string;
+  password: string;
+  avatar?: string;
+}
+
+// ===== dto end =====
