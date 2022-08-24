@@ -1,0 +1,50 @@
+body[theme-mode='light'], body {
+  --hello-gray-1: #fff;
+  --hello-gray-2: #fafafa;
+  --hello-gray-3: #f5f5f5;
+  --hello-gray-4: #f0f0f0;
+  --hello-gray-5: #d9d9d9;
+  --hello-gray-6: #bfbfbf;
+  --hello-gray-7: #8c8c8c;
+  --hello-gray-8: #595959;
+  --hello-gray-9: #434343;
+  --hello-gray-10: #262626;
+  --hello-gray-11: #1f1f1f;
+  --hello-gray-12: #141414;
+  --hello-gray-13: #000;
+}
+
+body[theme-mode='dark'] {
+  --hello-gray-13: #fff;
+  --hello-gray-12: #fafafa;
+  --hello-gray-11: #f5f5f5;
+  --hello-gray-10: #f0f0f0;
+  --hello-gray-9: #d9d9d9;
+  --hello-gray-8: #bfbfbf;
+  --hello-gray-7: #8c8c8c;
+  --hello-gray-6: #595959;
+  --hello-gray-5: #434343;
+  --hello-gray-4: #262626;
+  --hello-gray-3: #1f1f1f;
+  --hello-gray-2: #141414;
+  --hello-gray-1: #000;
+
+  background-color: var(--hello-gray-3);
+  
+  .hello-btn, .hello-btn-default {
+    background-color: transparent;
+    color: var(--hello-gray-12);
+    border-color: var(--hello-gray-5);
+  }
+
+  .hello-btn:hover, .hello-btn:focus {
+    color: var(--ant-primary-color-hover);
+    border-color: var(--ant-primary-color-hover);
+  }
+
+  .hello-input {
+    background-color: transparent;
+    color: var(--hello-gray-12);
+    border-color: var(--hello-gray-5);
+  }
+}

@@ -5,8 +5,11 @@ import { ConfigProvider } from 'antd';
 import Store from './store';
 import { WSManager } from './ws';
 import Login from './pages/login';
-import 'antd/dist/antd.css';
+import { setThemeMode } from './utils/common';
+// import 'antd/dist/antd.variable.css';
 // import 'antd/dist/antd.dark.css';
+import './static/style/.variable.less';
+import './static/style/.dark.less';
 
 const store = new Store();
 
@@ -14,6 +17,8 @@ const App: FC<{}> = () => {
   useEffect(() => {
     const ws = new WSManager();
     ws.init();
+
+    setThemeMode();
   }, []);
 
   ConfigProvider.config({
@@ -28,14 +33,15 @@ const App: FC<{}> = () => {
 
   return (
     <Provider store={store}>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Login />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='*' element={<Login />} />
-        </Routes>
-      </BrowserRouter>
-      <div className='app'></div>
+      <ConfigProvider prefixCls='hello'>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Login />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='*' element={<Login />} />
+          </Routes>
+        </BrowserRouter>
+      </ConfigProvider>
     </Provider>
   );
 };
