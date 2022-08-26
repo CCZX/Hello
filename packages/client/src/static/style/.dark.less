@@ -12,6 +12,8 @@ body[theme-mode='light'], body {
   --hello-gray-11: #1f1f1f;
   --hello-gray-12: #141414;
   --hello-gray-13: #000;
+
+  transition: background 0.5s;
 }
 
 body[theme-mode='dark'] {
@@ -36,10 +38,19 @@ body[theme-mode='dark'] {
     color: var(--hello-gray-12);
     border-color: var(--hello-gray-5);
   }
+  
+  .hello-btn-primary[disabled],
+  .hello-btn-primary[disabled].hello-btn:hover,
+  .hello-btn-primary[disabled].hello-btn:focus 
+  {
+    color: rgba(255, 255, 255, 0.3);
+    border-color: var(--hello-gray-5);
+    background: rgba(255, 255, 255, 0.08);
+  }
 
   .hello-btn:hover, .hello-btn:focus {
-    color: var(--ant-primary-color-hover);
-    border-color: var(--ant-primary-color-hover);
+    color: var(--hello-primary-color-hover);
+    border-color: var(--hello-primary-color-hover);
   }
 
   .hello-input {

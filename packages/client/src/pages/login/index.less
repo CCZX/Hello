@@ -4,7 +4,23 @@
   justify-content: center;
   height: 100%;
 
-  .login-page__form {
-    
+  .login-page__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+
+    .login-page__form {
+      width: 100%;
+      margin-top: 48px;
+
+      .item {
+        margin-bottom: 24px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 }

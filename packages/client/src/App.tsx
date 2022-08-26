@@ -3,7 +3,7 @@ import { Provider } from 'mobx-react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ConfigProvider } from 'antd';
 import Store from './store';
-import { WSManager } from './ws';
+import { WSManager } from './network/websocket';
 import Login from './pages/login';
 import { setThemeMode } from './utils/common';
 // import 'antd/dist/antd.variable.css';
@@ -29,6 +29,7 @@ const App: FC<{}> = () => {
       successColor: '#52c41a',
       infoColor: '#1890ff',
     },
+    prefixCls: 'hello',
   });
 
   return (

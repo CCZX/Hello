@@ -13,14 +13,17 @@ const Login: FC<LoginProps> = (props) => {
         <Logo width={200} height={200} />
 
         <div className='login-page__form'>
-          <Input />
-          <Button>hello</Button>
-          <Switch
-            onChange={(e) => setThemeMode(e ? 'dark' : 'light')}
-            checkedChildren='开启'
-            unCheckedChildren='关闭'
-            defaultChecked
-          />
+          <div className='item'>
+            <Input size='large' />
+          </div>
+          <div className='item'>
+            <Input size='large' />
+          </div>
+          <div className='item'>
+            <Button block type='primary'>
+              登录
+            </Button>
+          </div>
         </div>
       </div>
     </div>
