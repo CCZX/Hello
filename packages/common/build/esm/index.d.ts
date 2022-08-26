@@ -7,3 +7,14 @@ export declare enum AddUserTypeEnum {
     QRCode = 3,
     recommend = 4
 }
+export declare enum CustomResponseCodeEnum {
+    success = 200,
+    fail = -200,
+    noPermission = 401
+}
+export declare interface CreateUserDTO {
+    account: string;
+    name: string;
+    password: string;
+    avatar?: string;
+}
