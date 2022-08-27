@@ -6,7 +6,7 @@ import { constant } from '@hello/common';
   path: constant.SOCKET_PATH,
   cors: { origin: constant.CLIENT_BASE_HOST },
 })
-export class ChatService {
+export class MessageService {
   private socketIds: string[] = [];
 
   @WebSocketServer() server: Server;

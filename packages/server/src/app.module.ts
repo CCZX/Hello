@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigService, ConfigModule } from '@nestjs/config';
-import { ChatModule } from './chat/chat.module';
+import { MessageModule } from './modules/message/message.module';
 import { UserModule } from './modules/user/user.module';
 
 const libModules = [
@@ -28,7 +28,7 @@ const libModules = [
   }),
 ];
 
-const businessModules = [ChatModule, UserModule];
+const businessModules = [MessageModule, UserModule];
 
 @Module({
   imports: [...libModules, ...businessModules],
