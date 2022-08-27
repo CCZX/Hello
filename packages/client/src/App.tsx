@@ -5,7 +5,7 @@ import { ConfigProvider } from 'antd';
 import Store from './store';
 import { WSManager } from './network/websocket';
 import Login from './pages/login';
-import { setThemeMode } from './utils/common';
+import { switchThemeMode } from './utils/theme';
 // import 'antd/dist/antd.variable.css';
 // import 'antd/dist/antd.dark.css';
 import './static/style/.variable.less';
@@ -18,7 +18,7 @@ const App: FC<{}> = () => {
     const ws = new WSManager();
     ws.init();
 
-    setThemeMode();
+    switchThemeMode();
   }, []);
 
   ConfigProvider.config({

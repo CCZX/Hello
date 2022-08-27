@@ -33,22 +33,26 @@ body[theme-mode='dark'] {
 
   background-color: var(--hello-gray-3);
   
-  .hello-btn, .hello-btn-default {
+  .hello-btn:not(.hello-btn-primary):not(.hello-btn[disabled]) {
     background-color: transparent;
     color: var(--hello-gray-12);
+  }
+
+  .hello-btn:not(.hello-btn-text):not(.hello-btn-link) {
     border-color: var(--hello-gray-5);
   }
   
-  .hello-btn-primary[disabled],
-  .hello-btn-primary[disabled].hello-btn:hover,
-  .hello-btn-primary[disabled].hello-btn:focus 
+  .hello-btn[disabled],
+  .hello-btn[disabled].hello-btn:hover,
+  .hello-btn[disabled].hello-btn:focus 
   {
     color: rgba(255, 255, 255, 0.3);
     border-color: var(--hello-gray-5);
     background: rgba(255, 255, 255, 0.08);
   }
 
-  .hello-btn:hover, .hello-btn:focus {
+  .hello-btn:hover:not(.hello-btn-primary):not(.hello-btn-text):not(.hello-btn-link):not(.hello-btn[disabled]),
+  .hello-btn:focus:not(.hello-btn-primary):not(.hello-btn-text):not(.hello-btn-link) {
     color: var(--hello-primary-color-hover);
     border-color: var(--hello-primary-color-hover);
   }
