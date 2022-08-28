@@ -24,7 +24,13 @@ export declare interface CreateUserDTO {
   account: string;
   name: string;
   password: string;
+  rePassword: string;
   avatar?: string;
+}
+
+export declare interface LoginUserDTO {
+  account: string;
+  password: string;
 }
 
 // ===== dto end =====

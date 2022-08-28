@@ -22,7 +22,7 @@ const libModules = [
         database: configService.get('DB_DATABASE', 'Hello'), //数据库名
         // entities
         entities: ['dist/**/*.entity{.ts,.js}'],
-        synchronize: true,
+        synchronize: false,
       };
     },
   }),

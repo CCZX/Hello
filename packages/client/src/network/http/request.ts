@@ -81,7 +81,7 @@ class Request {
 }
 
 const request = new Request({
-  baseURL: constant.API_V1_PATH,
+  baseURL: `http://localhost:4000${constant.API_V1_PATH}`,
   timeout: DEFAULT_TIME_OUT,
   interceptors: {
     requestInterceptors: (config) => {

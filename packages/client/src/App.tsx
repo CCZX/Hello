@@ -23,11 +23,11 @@ const App: FC<{}> = () => {
 
   ConfigProvider.config({
     theme: {
-      primaryColor: '#ff4d4f',
-      errorColor: '#ff4d4f',
-      warningColor: '#faad14',
-      successColor: '#52c41a',
-      infoColor: '#1890ff',
+      primaryColor: '#128C7E',
+      // errorColor: '#ff4d4f',
+      // warningColor: '#faad14',
+      // successColor: '#52c41a',
+      // infoColor: '#1890ff',
     },
     prefixCls: 'hello',
   });

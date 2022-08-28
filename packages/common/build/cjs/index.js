@@ -20,6 +20,6 @@ var CustomResponseCodeEnum;
 (function (CustomResponseCodeEnum) {
     CustomResponseCodeEnum[CustomResponseCodeEnum["success"] = 200] = "success";
     CustomResponseCodeEnum[CustomResponseCodeEnum["fail"] = -200] = "fail";
-    CustomResponseCodeEnum[CustomResponseCodeEnum["noPermission"] = 401] = "noPermission"; // 没有权限
+    CustomResponseCodeEnum[CustomResponseCodeEnum["noPermission"] = 401] = "noPermission";
 })(CustomResponseCodeEnum = exports.CustomResponseCodeEnum || (exports.CustomResponseCodeEnum = {}));
 // ===== dto end =====
