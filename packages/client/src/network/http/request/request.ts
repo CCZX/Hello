@@ -37,9 +37,8 @@ class Request {
   private setRequestInterceptors() {
     this.instance.interceptors.request.use(
       (config: AxiosRequestConfig) => {
-        if (config.headers) {
-          config.headers.token = getToken();
-        }
+        config.headers = config.headers || {};
+        config.headers.token = `Bearer ${getToken()}`;
         // console.log('gloabl request success', config);
         return config;
       },

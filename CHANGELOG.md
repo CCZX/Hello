@@ -4,7 +4,7 @@
 ### Features
 
 * @hello/common build ([bcb5083](https://github.com/CCZX/Hello/commit/bcb50837825ea2de245eb86ad800311d9aa7e6c3))
-* auth token ([f971148](https://github.com/CCZX/Hello/commit/f9711482fd9e7adc7e1eacd4caa9de973013a728))
+* auth token ([41bea89](https://github.com/CCZX/Hello/commit/41bea896aa03e622184be732386a484153267887))
 * axios 封装 ([6e2dd71](https://github.com/CCZX/Hello/commit/6e2dd71f16547b3d9b6a20384db7e66abad4d098))
 * **client:** theme mode ([bb64f08](https://github.com/CCZX/Hello/commit/bb64f0876e7c411a89d2a7ad9eb3ae666bb4be60))
 * login page ([e78f281](https://github.com/CCZX/Hello/commit/e78f2817de598f6f37eb3dc1ab240e7a89d88a01))
