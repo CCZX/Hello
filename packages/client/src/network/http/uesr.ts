@@ -20,7 +20,7 @@ export function create(dto: CreateUserDTO) {
  */
 export function login(dto: LoginUserDTO) {
   return post<LoginUserDTO, {}>({
-    url: '/user/login',
+    url: '/auth/login',
     data: dto,
   });
 }

@@ -48,4 +48,15 @@ export class UserService {
 
     return {};
   }
+
+  /**
+   * 查询用户
+   * @param account
+   * @returns
+   */
+  async findOne(account: string) {
+    return this.userRepository.findOne({
+      where: { account },
+    });
+  }
 }

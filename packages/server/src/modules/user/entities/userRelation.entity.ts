@@ -4,7 +4,7 @@ import { AddUserTypeEnum } from '@hello/common';
 /**
  * user_a 主动添加 user_b
  */
-@Entity('UserRelation')
+@Entity('user_relation')
 export class UserRelationEntity {
   @PrimaryGeneratedColumn()
   id: number;
