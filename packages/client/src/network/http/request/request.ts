@@ -1,23 +1,24 @@
 import axios from 'axios';
 import type { AxiosResponse, AxiosInstance, AxiosRequestConfig } from 'axios';
 import { constant } from '@hello/common';
+import { getToken, saveToken } from './../../../utils/auth';
 
 interface RequestInterceptors {
   requestInterceptors?: (config: AxiosRequestConfig) => AxiosRequestConfig;
-  requestInterceptorsCatch?: (err: any) => any;
+  requestInterceptorsCatch?: (error: any) => any;
 
-  responseInterceptors?: <T = AxiosResponse>(config: T) => T;
-  responseInterceptorsCatch?: (err: any) => any;
+  responseInterceptors?: <T = AxiosResponse>(response: T) => T;
+  responseInterceptorsCatch?: (error: any) => any;
 }
 
-interface RequestConfig<REQCONF = any> extends AxiosRequestConfig<REQCONF> {
+export interface RequestConfig<REQCONF = any> extends AxiosRequestConfig<REQCONF> {
   interceptors?: RequestInterceptors;
 }
 
-interface Response<D> {
+export interface Response<D> {
   code: number;
   message: string;
-  data: D;
+  data: D & { token?: string };
 }
 
 const DEFAULT_TIME_OUT = 1000 * 10; // 10s
@@ -35,12 +36,15 @@ class Request {
 
   private setRequestInterceptors() {
     this.instance.interceptors.request.use(
-      (res: AxiosRequestConfig) => {
-        console.log('gloabl request success');
-        return res;
+      (config: AxiosRequestConfig) => {
+        if (config.headers) {
+          config.headers.token = getToken();
+        }
+        // console.log('gloabl request success', config);
+        return config;
       },
       (error: any) => {
-        console.log('gloabl request error');
+        // console.log('gloabl request error');
         return error;
       },
     );
@@ -48,12 +52,16 @@ class Request {
 
   private setResponseInterceptors() {
     this.instance.interceptors.response.use(
-      (res: AxiosResponse) => {
-        console.log('gloabl response success');
-        return res.data;
+      (response: AxiosResponse<Response<any>, any>) => {
+        // console.log('gloabl response success', response);
+        if (response.data?.data?.token) {
+          saveToken(response.data?.data?.token);
+        }
+        // data 是后端返回的信息，通常我们只关心这部分数据
+        return response.data;
       },
       (error: any) => {
-        console.log('gloabl response error');
+        // console.log('gloabl response error', error);
         return error;
       },
     );
@@ -80,39 +88,17 @@ class Request {
   }
 }
 
-const request = new Request({
-  baseURL: `http://localhost:4000${constant.API_V1_PATH}`,
+export const request = new Request({
+  baseURL: `${constant.SERVER_BASE_HOST}${constant.API_V1_PATH}`,
   timeout: DEFAULT_TIME_OUT,
   interceptors: {
     requestInterceptors: (config) => {
-      console.log('instance request success');
-
+      // console.log('instance request success', config);
       return config;
     },
     responseInterceptors: (result) => {
-      console.log('instance response success');
+      // console.log('instance response success', result);
       return result;
     },
   },
 });
-
-/**
- * get 请求方法
- */
-export function get<REQCONF, RESDATA>(config: RequestConfig<REQCONF>) {
-  return request.request<Response<RESDATA>>({
-    ...config,
-    method: 'GET',
-    params: config.data,
-  });
-}
-
-/**
- * post 请求方法
- */
-export function post<REQCONF = any, RESDATA = any>(config: RequestConfig<REQCONF>) {
-  return request.request<Response<RESDATA>>({
-    ...config,
-    method: 'POST',
-  });
-}

@@ -1,5 +1,5 @@
 import { CreateUserDTO, LoginUserDTO } from '@hello/common';
-import { post } from './request';
+import { post } from './request/methods';
 
 /**
  *
