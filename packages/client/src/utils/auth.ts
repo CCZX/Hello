@@ -1,9 +1,9 @@
-import { TOKEN_LOCAL_STORAGE_KEY } from '../constant/common';
+import { ACCESS_TOKEN_LOCAL_STORAGE_KEY } from '../constant/common';
 
-export function saveToken(token: string) {
-  window.localStorage.setItem(TOKEN_LOCAL_STORAGE_KEY, token);
+export function saveAccessToken(token: string) {
+  window.localStorage.setItem(ACCESS_TOKEN_LOCAL_STORAGE_KEY, token);
 }
 
-export function getToken() {
-  return window.localStorage.getItem(TOKEN_LOCAL_STORAGE_KEY) || '';
+export function getAccessToken() {
+  return window.localStorage.getItem(ACCESS_TOKEN_LOCAL_STORAGE_KEY) || '';
 }

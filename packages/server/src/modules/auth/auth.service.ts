@@ -19,13 +19,13 @@ export class AuthService {
     return null;
   }
 
-  generateToken(user: Partial<UserEntity>) {
+  generateAccessToken(user: Partial<UserEntity>) {
     return this.jwtService.sign(user);
   }
 
   async login(user: Partial<UserEntity>) {
-    const token = this.generateToken(user);
+    const accessToken = this.generateAccessToken(user);
 
-    return { token };
+    return { accessToken };
   }
 }

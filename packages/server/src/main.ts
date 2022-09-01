@@ -5,6 +5,7 @@ import { constant } from '@hello/common';
 import { AppModule } from './app.module';
 import { HttpExceptionFilter } from './filters/httpException.filter';
 import { TransformResponseInterceptor } from './interceptors/transformResponse.interceptor';
+import { AuthGuard } from './guard/auth.guard';
 
 function setApiDocs(app: INestApplication) {
   const config = new DocumentBuilder()
@@ -28,6 +29,7 @@ async function bootstrap() {
   app.setGlobalPrefix('api/v1');
   app.useGlobalFilters(new HttpExceptionFilter());
   app.useGlobalInterceptors(new TransformResponseInterceptor());
+  app.useGlobalGuards(new AuthGuard());
 
   setApiDocs(app);
 

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import type { AxiosResponse, AxiosInstance, AxiosRequestConfig } from 'axios';
 import { constant } from '@hello/common';
-import { getToken, saveToken } from './../../../utils/auth';
+import { getAccessToken, saveAccessToken } from './../../../utils/auth';
 
 interface RequestInterceptors {
   requestInterceptors?: (config: AxiosRequestConfig) => AxiosRequestConfig;
@@ -18,7 +18,7 @@ export interface RequestConfig<REQCONF = any> extends AxiosRequestConfig<REQCONF
 export interface Response<D> {
   code: number;
   message: string;
-  data: D & { token?: string };
+  data: D & { accessToken?: string };
 }
 
 const DEFAULT_TIME_OUT = 1000 * 10; // 10s
@@ -38,7 +38,7 @@ class Request {
     this.instance.interceptors.request.use(
       (config: AxiosRequestConfig) => {
         config.headers = config.headers || {};
-        config.headers.token = `Bearer ${getToken()}`;
+        config.headers.Authorization = `Bearer ${getAccessToken()}`;
         // console.log('gloabl request success', config);
         return config;
       },
@@ -53,8 +53,8 @@ class Request {
     this.instance.interceptors.response.use(
       (response: AxiosResponse<Response<any>, any>) => {
         // console.log('gloabl response success', response);
-        if (response.data?.data?.token) {
-          saveToken(response.data?.data?.token);
+        if (response.data?.data?.accessToken) {
+          saveAccessToken(response.data?.data?.accessToken);
         }
         // data 是后端返回的信息，通常我们只关心这部分数据
         return response.data;
