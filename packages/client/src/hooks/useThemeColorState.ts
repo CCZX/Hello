@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { DEFAULT_BRAND_COLOR } from '../constant/common';
+import { DEFAULT_BRAND_COLOR } from '../constant/theme';
 import { changeBrandColor, getBrandColor } from '../utils/theme';
 
 export function useBrandColorState() {

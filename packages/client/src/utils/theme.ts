@@ -3,9 +3,21 @@ import {
   DEFAULT_BRAND_COLOR,
   THEME_MODE_ATTR,
   THEME_MODE_LOCAL_STORAGE_KEY,
-} from '../constant/common';
+} from '../constant/theme';
 
 export type ThemeMode = 'dark' | 'light' | 'system';
+
+/**
+ * 获取系统的主题色
+ */
+export function getSystemThemeMode(): ThemeMode {
+  const themeMedia = window.matchMedia('(prefers-color-scheme: light)');
+  if (themeMedia.matches) {
+    return 'light';
+  }
+
+  return 'dark';
+}
 
 export function setCurrentThemeMode(mode: ThemeMode) {
   window.localStorage.setItem(THEME_MODE_LOCAL_STORAGE_KEY, mode);
@@ -16,20 +28,27 @@ export function getCurrentThemeMode() {
 }
 
 /**
- * 设置主题
+ * 切换主题
  * @param mode
+ * @param callback
  */
 export function changeThemeMode(mode?: ThemeMode, callback?: (mode: ThemeMode) => void) {
   if (mode) {
     setCurrentThemeMode(mode);
   }
 
-  mode = getCurrentThemeMode();
+  mode = getCurrentThemeMode() || 'system';
+
+  let attrValue = mode;
+
+  if (mode === 'system') {
+    attrValue = getSystemThemeMode();
+  }
 
   const body = document.querySelector('body');
 
   body?.removeAttribute(THEME_MODE_ATTR);
-  body?.setAttribute(THEME_MODE_ATTR, mode);
+  body?.setAttribute(THEME_MODE_ATTR, attrValue);
 
   if (callback) {
     callback(mode);
@@ -56,8 +75,3 @@ export function changeBrandColor(color: string, callback?: (color: string) => vo
     callback(color);
   }
 }
-
-/**
- * 获取系统的主题色
- */
-export function getSystemThemeMode() {}

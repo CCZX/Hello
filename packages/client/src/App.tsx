@@ -7,12 +7,13 @@ import Login from './pages/login';
 import Home from './pages/home';
 import { WSManager } from './network/websocket';
 import { getBrandColor, changeThemeMode } from './utils/theme';
+import Theme from './pages/components/theme';
 // import 'antd/dist/antd.variable.css';
 // import 'antd/dist/antd.dark.css';
 import './static/style/.variable.less';
 import './static/style/.dark.less';
 import './static/style/variable.less';
-import Theme from './pages/components/theme';
+import './static/style/replenish.less';
 
 const store = new Store();
 
@@ -27,10 +28,6 @@ const App: FC<{}> = () => {
   ConfigProvider.config({
     theme: {
       primaryColor: getBrandColor(),
-      // errorColor: '#ff4d4f',
-      // warningColor: '#faad14',
-      // successColor: '#52c41a',
-      // infoColor: '#1890ff',
     },
     prefixCls: 'hello',
   });

@@ -1,20 +1,21 @@
 import { FC } from 'react';
-import { ConfigProvider, Radio } from 'antd';
+import { ConfigProvider, Radio, Tooltip } from 'antd';
 import { useThemeModeState } from '../../../hooks/useThemeModeState';
 import { useBrandColorState } from '../../../hooks/useThemeColorState';
+import { PRESET_BRAND_COLOR } from '../../../constant/theme';
 import './index.less';
 
 interface ThemeProps {}
 
-const optionsWithDisabled = [
-  { label: '深色', value: 'dark' },
-  { label: '浅色', value: 'light' },
-  { label: '跟随系统', value: 'system', disabled: true },
+const themeModeList = [
+  { label: <Tooltip title='浅色'>☀️</Tooltip>, value: 'light' },
+  { label: <Tooltip title='深色'>🌛</Tooltip>, value: 'dark' },
+  { label: <Tooltip title='跟随系统'>💻</Tooltip>, value: 'system' },
 ];
 
 const Theme: FC<ThemeProps> = (props) => {
   const [themeMode, setThemeMode] = useThemeModeState();
-  const [_, setBrandColor] = useBrandColorState();
+  const [brandColor, setBrandColor] = useBrandColorState();
 
   const onChangeBrandColor = (color: string) => {
     setBrandColor(color);
@@ -26,26 +27,28 @@ const Theme: FC<ThemeProps> = (props) => {
   };
 
   return (
-    <div className='theme-container' style={{ position: 'fixed', bottom: '70px', right: '30px' }}>
+    <div className='theme-container'>
       <div className='preset-color-list'>
-        <div
-          className='preset-color-item blue'
-          data-color='1890ff'
-          onClick={() => onChangeBrandColor('#1890ff')}
-        ></div>
-        <div
-          className='preset-color-item green'
-          data-color='128C7E'
-          onClick={() => onChangeBrandColor('#128C7E')}
-        ></div>
+        {PRESET_BRAND_COLOR.map((item) => {
+          return (
+            <div
+              key={item.value}
+              className={`preset-color-item ${brandColor === item.value ? 'active' : ''}`}
+              data-color={item.value}
+              style={{ backgroundColor: item.value }}
+              onClick={() => onChangeBrandColor(item.value)}
+            />
+          );
+        })}
       </div>
       <Radio.Group
-        options={optionsWithDisabled}
-        onChange={(e) => setThemeMode(e.target.value)}
+        options={themeModeList}
+        onChange={(e) => setThemeMode(e?.target?.value || 'system')}
         value={themeMode}
         optionType='button'
         buttonStyle='solid'
         size='small'
+        style={{ width: '100%' }}
       />
     </div>
   );
