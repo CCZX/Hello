@@ -1,0 +1,37 @@
+// 颜色变量，这里主要定义的黑白色，黑白主题会黑白颠倒
+// 其他颜色（primary danger...）antd 会自动生成
+
+body[theme-mode='light'], body {
+  --hello-color-black: 0, 0, 0;
+  --hello-color-white: 255, 255, 255;
+}
+
+body[theme-mode='dark'] {
+  --hello-color-black: 255, 255, 255;
+  --hello-color-white: 0, 0, 0;
+}
+
+body {
+  --hello-font-size-0: 10px;
+  --hello-font-size-1: 12px;
+  --hello-font-size-2: 14px;
+  --hello-font-size-3: 16px;
+  --hello-font-size-4: 18px;
+  --hello-font-size-5: 20px;
+  --hello-font-size-6: 24px;
+
+  --hello-black-color-1: rgba(var(--hello-color-black), 1);
+  --hello-black-color-2: rgba(var(--hello-color-black), 0.8);
+  --hello-black-color-3: rgba(var(--hello-color-black), 0.6);
+  --hello-black-color-4: rgba(var(--hello-color-black), 0.3);
+
+  --hello-white-color-1: rgba(var(--hello-color-white), 1);
+  --hello-white-color-2: rgba(var(--hello-color-white), 0.8);
+  --hello-white-color-3: rgba(var(--hello-color-white), 0.6);
+  --hello-white-color-4: rgba(var(--hello-color-white), 0.3);
+
+  // --hello-font-color-1: var(--hello-black-color-1);
+  // --hello-font-color-2: var(--hello-black-color-2);
+  // --hello-font-color-3: var(--hello-black-color-3);
+  // --hello-font-color-4: var(--hello-black-color-4);
+}

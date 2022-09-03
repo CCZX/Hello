@@ -1,0 +1,43 @@
+.conversation-container {
+  display: flex;
+  align-items: center;
+  height: 76px;
+  padding: 0 12px;
+  border-radius: 12px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--hello-primary-color-outline);
+  }
+
+  .conversation-content {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    margin-left: 12px;
+
+    .conversation-content__left {
+      &-title {
+        line-height: 24px;
+        font-size: var(--hello-font-size-3);
+        font-weight: 500;
+        color: var(--hello-black-color-1);
+      }
+
+      &-message {
+        line-height: 16px;
+        margin-top: 8px;
+        font-size: var(--hello-font-size-1);
+        font-weight: 400;
+        color: var(--hello-black-color-2);
+      }
+    }
+
+    &__right {
+      &-time {
+        font-size: var(--hello-font-size-0);
+        color: var(--hello-black-color-3);
+      }
+    }
+  }
+}

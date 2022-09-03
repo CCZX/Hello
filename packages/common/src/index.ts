@@ -15,7 +15,31 @@ export enum AddUserTypeEnum {
 export enum CustomResponseCodeEnum {
   success = 200, // 处理成功
   fail = -200, // 处理失败
-  noPermission = 401, // 没有权限
+  unAuthorization = 401, // 没有权限
+}
+
+export enum MessageTypeEnum {
+  text = 0,
+  image = 1,
+  textAndImage = 2,
+}
+
+export interface Message {
+  id: string;
+  /**
+   * message sender id
+   */
+  from: string | number;
+  /**
+   * message receiver id
+   */
+  to: string | number;
+  /**
+   * message send time
+   */
+  at: number;
+  type: MessageTypeEnum;
+  text: string;
 }
 
 // ===== dto start... =====

@@ -1,4 +1,4 @@
-# 1.0.0 (2022-08-30)
+# 1.0.0 (2022-09-01)
 
 
 ### Features
@@ -17,6 +17,7 @@
 * 注册登录接口调通 ([40b234b](https://github.com/CCZX/Hello/commit/40b234b5b85732d5c62e779de45e15ee8445498e))
 * 自定义主题 ([4285563](https://github.com/CCZX/Hello/commit/428556386c343f1c9fea953657ddea15d6701887))
 * 连接数据库 ([a09a3b5](https://github.com/CCZX/Hello/commit/a09a3b58e7d590a359cbeb7a345e61fdea7f8a2a))
+* 验证 token ([fbbd49a](https://github.com/CCZX/Hello/commit/fbbd49aae149a881b579c2a8378a112a8b944ee8))
 
 
 

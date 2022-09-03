@@ -10,7 +10,29 @@ export declare enum AddUserTypeEnum {
 export declare enum CustomResponseCodeEnum {
     success = 200,
     fail = -200,
-    noPermission = 401
+    unAuthorization = 401
+}
+export declare enum MessageTypeEnum {
+    text = 0,
+    image = 1,
+    textAndImage = 2
+}
+export interface Message {
+    id: string;
+    /**
+     * message sender id
+     */
+    from: string | number;
+    /**
+     * message receiver id
+     */
+    to: string | number;
+    /**
+     * message send time
+     */
+    at: number;
+    type: MessageTypeEnum;
+    text: string;
 }
 export declare interface CreateUserDTO {
     account: string;

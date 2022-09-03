@@ -14,6 +14,12 @@ export var CustomResponseCodeEnum;
 (function (CustomResponseCodeEnum) {
     CustomResponseCodeEnum[CustomResponseCodeEnum["success"] = 200] = "success";
     CustomResponseCodeEnum[CustomResponseCodeEnum["fail"] = -200] = "fail";
-    CustomResponseCodeEnum[CustomResponseCodeEnum["noPermission"] = 401] = "noPermission";
+    CustomResponseCodeEnum[CustomResponseCodeEnum["unAuthorization"] = 401] = "unAuthorization";
 })(CustomResponseCodeEnum || (CustomResponseCodeEnum = {}));
+export var MessageTypeEnum;
+(function (MessageTypeEnum) {
+    MessageTypeEnum[MessageTypeEnum["text"] = 0] = "text";
+    MessageTypeEnum[MessageTypeEnum["image"] = 1] = "image";
+    MessageTypeEnum[MessageTypeEnum["textAndImage"] = 2] = "textAndImage";
+})(MessageTypeEnum || (MessageTypeEnum = {}));
 // ===== dto end =====
