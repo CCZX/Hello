@@ -1,5 +1,5 @@
 import { useCallback, useLayoutEffect, useState } from 'react';
-import { ThemeMode, switchThemeMode, getCurrentThemeMode } from '../utils/theme';
+import { ThemeMode, changeThemeMode, getCurrentThemeMode } from '../utils/theme';
 
 export function useThemeModeState() {
   const [themeMode, setThemeMode] = useState<ThemeMode>('light');
@@ -9,7 +9,7 @@ export function useThemeModeState() {
   }, []);
 
   const handleChangeMode = useCallback((mode: ThemeMode) => {
-    switchThemeMode(mode, setThemeMode);
+    changeThemeMode(mode, setThemeMode);
   }, []);
 
   return [themeMode, handleChangeMode] as const;

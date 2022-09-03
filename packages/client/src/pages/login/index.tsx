@@ -2,7 +2,6 @@ import { FC, useState } from 'react';
 import { Button, Input, Tabs } from 'antd';
 import { CreateUserDTO, LoginUserDTO } from '@hello/common';
 import Logo from '../../components/Logo';
-import Theme from '../components/theme';
 import { create, login } from '../../network/http/uesr';
 import './index.less';
 
@@ -24,9 +23,8 @@ const Login: FC<LoginProps> = (props) => {
 
   return (
     <div className='login-page'>
-      <Theme />
       <div className='login-page__content'>
-        <Logo width={200} height={200} />
+        <Logo size={200} />
 
         <Tabs centered className='tabs' defaultActiveKey='2'>
           <TabPane disabled tab='中文' key='1'></TabPane>

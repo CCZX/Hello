@@ -6,7 +6,7 @@ import Store from './store';
 import Login from './pages/login';
 import Home from './pages/home';
 import { WSManager } from './network/websocket';
-import { switchThemeMode } from './utils/theme';
+import { getBrandColor, changeThemeMode } from './utils/theme';
 // import 'antd/dist/antd.variable.css';
 // import 'antd/dist/antd.dark.css';
 import './static/style/.variable.less';
@@ -21,12 +21,12 @@ const App: FC<{}> = () => {
     const ws = new WSManager();
     ws.init();
 
-    switchThemeMode();
+    changeThemeMode();
   }, []);
 
   ConfigProvider.config({
     theme: {
-      primaryColor: '#128C7E',
+      primaryColor: getBrandColor(),
       // errorColor: '#ff4d4f',
       // warningColor: '#faad14',
       // successColor: '#52c41a',
