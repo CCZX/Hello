@@ -5,10 +5,16 @@ export class UserEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
+  /**
+   * user account
+   */
   @Column({ unique: true })
-  account: string; // 唯一，使用 account 登录
+  account: string;
 
-  @Column({ length: 10 })
+  /**
+   * user name
+   */
+  @Column({ length: 10, default: '' })
   name: string;
 
   @Column({ length: 20 })

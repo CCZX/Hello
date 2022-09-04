@@ -4,6 +4,7 @@ import { ConfigService, ConfigModule } from '@nestjs/config';
 import { MessageModule } from './modules/message/message.module';
 import { UserModule } from './modules/user/user.module';
 import { AuthModule } from './modules/auth/auth.module';
+import { FriendModule } from './modules/friend/friend.module';
 
 const libModules = [
   ConfigModule.forRoot({
@@ -23,13 +24,16 @@ const libModules = [
         database: configService.get('DB_DATABASE', 'Hello'), //数据库名
         // entities
         entities: ['dist/**/*.entity{.ts,.js}'],
+        /**
+         * sure to set the false in production environments
+         */
         synchronize: false,
       };
     },
   }),
 ];
 
-const businessModules = [MessageModule, UserModule, AuthModule];
+const businessModules = [MessageModule, UserModule, AuthModule, FriendModule];
 
 @Module({
   imports: [...libModules, ...businessModules],

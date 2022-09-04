@@ -1,15 +1,4 @@
-CREATE TABLE IF NOT EXISTS `user` (
-  `id` INT UNSINGED AUTO_INCREMENT,
-  `name` VARCHAR(10) NOT NULL,
-  `password` VARCHAR(20) NOT  NULL,
-  `avatar` VARCHAR(500),
-  `last_login_time` TIMESTAMP,
-  `account` VARCHAR(255),
-  PRIMARY KEY (`id`),
-  UNIQUE (`account`)
-)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+SELECT * FROM user WHERE account='account';
+SELECT account, name FROM user WHERE id='id';
 
-CREATE TABLE IF NOT EXISTS `user_relation` (
-  `id` INT UNSINGED AUTO_INCREMENT,
-  `user_a_id` VARCHAR()
-)
+INSERT INTO user (account, name, password) VALUES ('account', 'name', 'password');
