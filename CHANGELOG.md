@@ -1,9 +1,10 @@
-# 1.0.0 (2022-09-03)
+# 1.0.0 (2022-09-04)
 
 
 ### Features
 
 * @hello/common build ([bcb5083](https://github.com/CCZX/Hello/commit/bcb50837825ea2de245eb86ad800311d9aa7e6c3))
+* app 跟随系统主题色 ([e090d03](https://github.com/CCZX/Hello/commit/e090d0340bc68c5779708e627e5c1ef05b65b815))
 * auth token ([41bea89](https://github.com/CCZX/Hello/commit/41bea896aa03e622184be732386a484153267887))
 * axios 封装 ([6e2dd71](https://github.com/CCZX/Hello/commit/6e2dd71f16547b3d9b6a20384db7e66abad4d098))
 * change brand color ([ef9f69c](https://github.com/CCZX/Hello/commit/ef9f69cfdf4f765382e16e94fe582c72971f2527))

@@ -7,6 +7,8 @@ import { AuthService } from './auth.service';
 import { LocalStrategy } from './strategies/local.strategy';
 import { JWT_SECRET } from 'config/conf';
 import { JwtStrategy } from './strategies/jwt.strategy';
+import { APP_GUARD } from '@nestjs/core';
+import { JwtAuthGuard } from './guards/jwtAuth.guard';
 
 const jwtModule = JwtModule.register({
   secret: JWT_SECRET,
@@ -16,7 +18,15 @@ const jwtModule = JwtModule.register({
 @Module({
   imports: [UserModule, PassportModule, jwtModule],
   exports: [],
-  providers: [AuthService, LocalStrategy, JwtStrategy],
+  providers: [
+    AuthService,
+    LocalStrategy,
+    JwtStrategy,
+    {
+      provide: APP_GUARD,
+      useClass: JwtAuthGuard,
+    },
+  ],
   controllers: [AuthController],
 })
 export class AuthModule {}

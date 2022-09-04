@@ -1,6 +1,5 @@
-import { Body, Controller, Get, Param, Post, UseGuards } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
-import { JwtAuthGuard } from '../auth/guards/jwtAuth.guard';
 import { CreateUserDTO } from './dto/createUser.dto';
 import { UserService } from './user.service';
 
@@ -16,7 +15,6 @@ export class UserController {
   }
 
   @ApiOperation({ summary: '获取用户详情' })
-  @UseGuards(JwtAuthGuard)
   @Get(':id')
   async findOne(@Param('id') id: string) {
     console.log('id', id);
