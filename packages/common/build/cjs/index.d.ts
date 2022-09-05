@@ -17,8 +17,12 @@ export declare enum MessageTypeEnum {
     image = 1,
     textAndImage = 2
 }
+export declare enum MessageTragetEnum {
+    friend = 0,
+    group = 1
+}
 export interface Message {
-    id: string;
+    id: number;
     /**
      * message sender id
      */
@@ -33,6 +37,18 @@ export interface Message {
     at: number;
     type: MessageTypeEnum;
     text: string;
+    /**
+     * is read message
+     * 0 || 1
+     */
+    isRead: number;
+    /**
+     * target of message
+     * exp:
+     * 1. friend message
+     * 2. group message
+     */
+    target: MessageTragetEnum;
 }
 export declare interface CreateUserDTO {
     account: string;

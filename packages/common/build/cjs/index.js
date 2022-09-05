@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.MessageTypeEnum = exports.CustomResponseCodeEnum = exports.AddUserTypeEnum = exports.constant = void 0;
+exports.MessageTragetEnum = exports.MessageTypeEnum = exports.CustomResponseCodeEnum = exports.AddUserTypeEnum = exports.constant = void 0;
 const constant_1 = __importDefault(require("./constant"));
 exports.constant = constant_1.default;
 // 添加用户为好友的方式
@@ -28,4 +28,9 @@ var MessageTypeEnum;
     MessageTypeEnum[MessageTypeEnum["image"] = 1] = "image";
     MessageTypeEnum[MessageTypeEnum["textAndImage"] = 2] = "textAndImage";
 })(MessageTypeEnum = exports.MessageTypeEnum || (exports.MessageTypeEnum = {}));
+var MessageTragetEnum;
+(function (MessageTragetEnum) {
+    MessageTragetEnum[MessageTragetEnum["friend"] = 0] = "friend";
+    MessageTragetEnum[MessageTragetEnum["group"] = 1] = "group";
+})(MessageTragetEnum = exports.MessageTragetEnum || (exports.MessageTragetEnum = {}));
 // ===== dto end =====

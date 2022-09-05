@@ -24,8 +24,13 @@ export enum MessageTypeEnum {
   textAndImage = 2,
 }
 
+export enum MessageTragetEnum {
+  friend = 0,
+  group = 1,
+}
+
 export interface Message {
-  id: string;
+  id: number;
   /**
    * message sender id
    */
@@ -40,6 +45,18 @@ export interface Message {
   at: number;
   type: MessageTypeEnum;
   text: string;
+  /**
+   * is read message
+   * 0 || 1
+   */
+  isRead: number;
+  /**
+   * target of message
+   * exp:
+   * 1. friend message
+   * 2. group message
+   */
+  target: MessageTragetEnum;
 }
 
 // ===== dto start... =====

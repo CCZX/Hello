@@ -22,4 +22,9 @@ export var MessageTypeEnum;
     MessageTypeEnum[MessageTypeEnum["image"] = 1] = "image";
     MessageTypeEnum[MessageTypeEnum["textAndImage"] = 2] = "textAndImage";
 })(MessageTypeEnum || (MessageTypeEnum = {}));
+export var MessageTragetEnum;
+(function (MessageTragetEnum) {
+    MessageTragetEnum[MessageTragetEnum["friend"] = 0] = "friend";
+    MessageTragetEnum[MessageTragetEnum["group"] = 1] = "group";
+})(MessageTragetEnum || (MessageTragetEnum = {}));
 // ===== dto end =====

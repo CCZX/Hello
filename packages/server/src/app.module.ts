@@ -16,15 +16,17 @@ const libModules = [
     useFactory: (configService: ConfigService) => {
       return {
         type: 'mysql',
-        // .env 获取
-        host: configService.get('DB_HOST', 'localhost'), // 主机，默认为localhost
-        port: configService.get<number>('DB_PORT', 3306), // 端口号
-        username: configService.get('DB_USER', 'chenchao'), // 用户名
-        password: configService.get('DB_PASSWORD', '123456'), // 密码
-        database: configService.get('DB_DATABASE', 'Hello'), //数据库名
-        // entities
+        /**
+         * .env | .env.prod
+         */
+        host: configService.get('DB_HOST', 'localhost'),
+        port: configService.get<number>('DB_PORT', 3306),
+        username: configService.get('DB_USER', 'chenchao'),
+        password: configService.get('DB_PASSWORD', '123456'),
+        database: configService.get('DB_DATABASE', 'Hello'),
         entities: ['dist/**/*.entity{.ts,.js}'],
         /**
+         * open will auto create database
          * sure to set the false in production environments
          */
         synchronize: false,
