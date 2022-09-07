@@ -8,6 +8,27 @@
 
 一个即时聊天 WebApp。
 
+## 实现
+
+### 设计
+- figma
+- MasterGo
+- 飞书文档
+
+### 前端
+
+- React
+- vite
+- antd
+- less
+
+### 后端
+
+- NodeJS
+- mysql
+- nest
+- typeORM
+
 ## 功能列表
  
 

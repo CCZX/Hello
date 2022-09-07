@@ -1,4 +1,4 @@
-# 1.0.0 (2022-09-05)
+# 1.0.0 (2022-09-06)
 
 
 ### Features
@@ -13,7 +13,7 @@
 * **client:** theme mode ([bb64f08](https://github.com/CCZX/Hello/commit/bb64f0876e7c411a89d2a7ad9eb3ae666bb4be60))
 * homePage ([b67c673](https://github.com/CCZX/Hello/commit/b67c673d83c9765edec84cbe6045b1616aad661a))
 * login page ([e78f281](https://github.com/CCZX/Hello/commit/e78f2817de598f6f37eb3dc1ab240e7a89d88a01))
-* **server:** create sql ([48890f7](https://github.com/CCZX/Hello/commit/48890f797657ed45504461f76976ba646d0d42ee))
+* **server:** create message entity ([7aab198](https://github.com/CCZX/Hello/commit/7aab198d47572f98338b5cc5f94fdd145b34fb53))
 * **server:** filter & interceptor ([2a7c253](https://github.com/CCZX/Hello/commit/2a7c253880ef87e12c03c74d5b86c410b1ae76ef))
 * **server:** friend module ([80f8356](https://github.com/CCZX/Hello/commit/80f8356c04c7b6879e90378a5b05d75cd88b81e4))
 * **server:** 生成 API 文档 & message module ([1c141f4](https://github.com/CCZX/Hello/commit/1c141f40786f3764ee86e7a2ab49287787f71f7e))
