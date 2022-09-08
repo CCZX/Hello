@@ -24,7 +24,7 @@ const libModules = [
         port: configService.get<number>('DB_PORT', 3306),
         username: configService.get('DB_USER', 'chenchao'),
         password: configService.get('DB_PASSWORD', '123456'),
-        database: configService.get('DB_DATABASE', 'Hello'),
+        database: configService.get('DB_DATABASE', 'hello_app'),
         entities: ['dist/**/*.entity{.ts,.js}'],
         /**
          * open will auto create database
