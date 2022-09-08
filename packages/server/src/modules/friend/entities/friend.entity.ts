@@ -1,4 +1,3 @@
-import { AddUserTypeEnum } from '@hello/common';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 /**
@@ -6,7 +5,7 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
  * respectively using userA and useB as party A (user_a_id),
  * using userA as sender (send_user_id)
  */
-@Entity('user_friend')
+@Entity('friend')
 export class UserFriend {
   @PrimaryGeneratedColumn()
   id: number;

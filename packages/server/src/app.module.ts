@@ -5,6 +5,7 @@ import { MessageModule } from './modules/message/message.module';
 import { UserModule } from './modules/user/user.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { FriendModule } from './modules/friend/friend.module';
+import { GroupModule } from './modules/group/group.module';
 
 const libModules = [
   ConfigModule.forRoot({
@@ -35,7 +36,7 @@ const libModules = [
   }),
 ];
 
-const businessModules = [MessageModule, UserModule, AuthModule, FriendModule];
+const businessModules = [MessageModule, UserModule, AuthModule, FriendModule, GroupModule];
 
 @Module({
   imports: [...libModules, ...businessModules],
