@@ -1,14 +1,14 @@
 import constant from './constant';
 export { constant };
 // 添加用户为好友的方式
-export var AddUserTypeEnum;
-(function (AddUserTypeEnum) {
-    AddUserTypeEnum[AddUserTypeEnum["search"] = 0] = "search";
-    AddUserTypeEnum[AddUserTypeEnum["phoneNumber"] = 1] = "phoneNumber";
-    AddUserTypeEnum[AddUserTypeEnum["group"] = 2] = "group";
-    AddUserTypeEnum[AddUserTypeEnum["QRCode"] = 3] = "QRCode";
-    AddUserTypeEnum[AddUserTypeEnum["recommend"] = 4] = "recommend";
-})(AddUserTypeEnum || (AddUserTypeEnum = {}));
+export var AddFriendTypeEnum;
+(function (AddFriendTypeEnum) {
+    AddFriendTypeEnum[AddFriendTypeEnum["search"] = 0] = "search";
+    AddFriendTypeEnum[AddFriendTypeEnum["phoneNumber"] = 1] = "phoneNumber";
+    AddFriendTypeEnum[AddFriendTypeEnum["group"] = 2] = "group";
+    AddFriendTypeEnum[AddFriendTypeEnum["QRCode"] = 3] = "QRCode";
+    AddFriendTypeEnum[AddFriendTypeEnum["recommend"] = 4] = "recommend";
+})(AddFriendTypeEnum || (AddFriendTypeEnum = {}));
 // 自定义状态码
 export var CustomResponseCodeEnum;
 (function (CustomResponseCodeEnum) {

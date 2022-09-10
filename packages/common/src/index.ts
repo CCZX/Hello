@@ -3,7 +3,7 @@ import constant from './constant';
 export { constant };
 
 // 添加用户为好友的方式
-export enum AddUserTypeEnum {
+export enum AddFriendTypeEnum {
   search = 0,
   phoneNumber = 1,
   group = 2, // 通过群聊添加

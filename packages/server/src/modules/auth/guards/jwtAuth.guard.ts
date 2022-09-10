@@ -1,4 +1,4 @@
-import { ExecutionContext, Injectable } from '@nestjs/common';
+import { ExecutionContext, Injectable, UnauthorizedException } from '@nestjs/common';
 import { Reflector } from '@nestjs/core';
 import { AuthGuard } from '@nestjs/passport';
 import { Observable } from 'rxjs';
@@ -16,13 +16,21 @@ export class JwtAuthGuard extends AuthGuard('jwt') {
       context.getClass(),
     ]);
 
-    console.log('roles', roles);
-
-    if (roles.includes(RolesTypeEnum.open)) {
-      console.log('skip');
+    if (roles && roles.includes(RolesTypeEnum.open)) {
       return true;
     }
 
     return super.canActivate(context);
+  }
+
+  handleRequest(err, user, _, context: ExecutionContext) {
+    if (err || !user) {
+      throw err || new UnauthorizedException();
+    }
+
+    // 请求信息里添加上 user id
+    const req = context.switchToHttp().getRequest();
+    req.userId = user.id;
+    return user;
   }
 }

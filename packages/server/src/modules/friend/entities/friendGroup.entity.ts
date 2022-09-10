@@ -4,7 +4,7 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
  * friends group entity
  */
 @Entity('friend_group')
-export class FriendGroup {
+export class FriendGroupEntity {
   @PrimaryGeneratedColumn()
   id: number;
 

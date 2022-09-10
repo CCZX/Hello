@@ -1,6 +1,6 @@
 import constant from './constant';
 export { constant };
-export declare enum AddUserTypeEnum {
+export declare enum AddFriendTypeEnum {
     search = 0,
     phoneNumber = 1,
     group = 2,

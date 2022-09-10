@@ -13,7 +13,7 @@
 * **client:** theme mode ([bb64f08](https://github.com/CCZX/Hello/commit/bb64f0876e7c411a89d2a7ad9eb3ae666bb4be60))
 * homePage ([b67c673](https://github.com/CCZX/Hello/commit/b67c673d83c9765edec84cbe6045b1616aad661a))
 * login page ([e78f281](https://github.com/CCZX/Hello/commit/e78f2817de598f6f37eb3dc1ab240e7a89d88a01))
-* **server:** add group module and friend entity ([014fb9b](https://github.com/CCZX/Hello/commit/014fb9bce1a939b2703248255049664670d36a60))
+* **server:** add group module and friend entity ([4de1dcf](https://github.com/CCZX/Hello/commit/4de1dcfc60b87afec075485a29d5a942d1c3b00a))
 * **server:** create message entity ([7e8f338](https://github.com/CCZX/Hello/commit/7e8f338dc982ea6705f3227a259635301cb86e00))
 * **server:** filter & interceptor ([2a7c253](https://github.com/CCZX/Hello/commit/2a7c253880ef87e12c03c74d5b86c410b1ae76ef))
 * **server:** friend module ([80f8356](https://github.com/CCZX/Hello/commit/80f8356c04c7b6879e90378a5b05d75cd88b81e4))

@@ -1,3 +1,4 @@
+import { AddFriendTypeEnum } from '@hello/common';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 /**
@@ -6,7 +7,7 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
  * using userA as sender (send_user_id)
  */
 @Entity('friend')
-export class UserFriend {
+export class FriendEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -25,7 +26,7 @@ export class UserFriend {
   /**
    * middleman, shares one to another
    */
-  @Column()
+  @Column({ nullable: true })
   user_c_id: number;
 
   /**
@@ -37,7 +38,7 @@ export class UserFriend {
   /**
    * friend note name
    */
-  @Column({ length: 500, nullable: true })
+  @Column({ length: 20, nullable: true })
   note: string;
 
   /**
@@ -61,6 +62,6 @@ export class UserFriend {
   /**
    * how add?
    */
-  @Column()
-  type: number;
+  @Column({ default: AddFriendTypeEnum.search })
+  add_type: number;
 }

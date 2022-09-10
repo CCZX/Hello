@@ -1,7 +1,7 @@
 import { Column, Entity, PrimaryColumn } from 'typeorm';
 
 @Entity('group_member')
-export class GroupMember {
+export class GroupMemberEntity {
   @PrimaryColumn()
   id: number;
 
