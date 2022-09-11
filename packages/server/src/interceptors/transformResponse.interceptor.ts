@@ -8,7 +8,7 @@ export class TransformResponseInterceptor implements NestInterceptor {
     return next.handle().pipe(
       map((data) => {
         return {
-          data,
+          data: data || [],
           code: CustomResponseCodeEnum.success,
           message: '请求成功',
         };

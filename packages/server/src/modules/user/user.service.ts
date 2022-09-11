@@ -54,9 +54,15 @@ export class UserService {
    * @param account
    * @returns
    */
-  async findOne(account: string) {
+  async findOneByAccount(account: string) {
     return this.userRepository.findOne({
       where: { account },
+    });
+  }
+
+  async findOneById(id: number) {
+    return this.userRepository.findOne({
+      where: { id },
     });
   }
 }

@@ -1,4 +1,9 @@
-# 1.0.0 (2022-09-08)
+# 1.0.0 (2022-09-10)
+
+
+### Bug Fixes
+
+* **server:** modify database name ([216b1b8](https://github.com/CCZX/Hello/commit/216b1b8fc3e565044ed6d158f5231f5182bf1d69))
 
 
 ### Features

@@ -3,13 +3,13 @@ import { ApiProperty } from '@nestjs/swagger';
 
 export class AddFriendDTO {
   @ApiProperty({ description: '主动发起添加好友的用户 id' })
-  userAId: string;
+  userAId: number;
 
   @ApiProperty({ description: '被添加好友的用户 id' })
-  userBId: string;
+  userBId: number;
 
   @ApiProperty({ description: '中间人 id' })
-  userCId?: string;
+  userCId?: number;
 
   @ApiProperty({ description: '添加方式' })
   addType: AddFriendTypeEnum;

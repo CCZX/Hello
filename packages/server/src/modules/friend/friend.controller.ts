@@ -9,5 +9,7 @@ export class FriendController {
   constructor(private readonly friendService: FriendService) {}
 
   @Post('add')
-  async add(@Body() dto: AddFriendDTO) {}
+  async add(@Body() dto: AddFriendDTO) {
+    return this.friendService.add(dto);
+  }
 }
