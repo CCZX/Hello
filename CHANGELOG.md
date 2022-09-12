@@ -26,6 +26,7 @@
 * **server:** filter & interceptor ([2a7c253](https://github.com/CCZX/Hello/commit/2a7c253880ef87e12c03c74d5b86c410b1ae76ef))
 * **server:** friend module ([80f8356](https://github.com/CCZX/Hello/commit/80f8356c04c7b6879e90378a5b05d75cd88b81e4))
 * **server:** 生成 API 文档 & message module ([1c141f4](https://github.com/CCZX/Hello/commit/1c141f40786f3764ee86e7a2ab49287787f71f7e))
+* **server:** 获取好友接口 ([a6eed64](https://github.com/CCZX/Hello/commit/a6eed64b7367d7062c33bf306ae86edd68f5a9de))
 * user 接口调通 ([0e4ee8f](https://github.com/CCZX/Hello/commit/0e4ee8fdb6981a7bf18f57a03775eb9434158a7e))
 * userEntity ([2f3e45f](https://github.com/CCZX/Hello/commit/2f3e45fec9052b570c6ae2098fc7657fb92ea8dc))
 * 初始化: ws 调通, monorepo 包管理 ([6a38162](https://github.com/CCZX/Hello/commit/6a38162efebf74ce8d525150e2df5bd8672a1a64))

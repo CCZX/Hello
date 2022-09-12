@@ -1,5 +1,4 @@
 import { FC, useEffect } from 'react';
-import { Provider } from 'mobx-react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ConfigProvider } from 'antd';
 import Store from './store';
@@ -33,20 +32,18 @@ const App: FC<{}> = () => {
   });
 
   return (
-    <Provider store={store}>
-      <ConfigProvider prefixCls='hello'>
-        <Theme />
-        <BrowserRouter>
-          <Routes>
-            <Route path='/' element={<Login />} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/home' element={<Home />} />
-            <Route path='/home/*' element={<Home />} />
-            <Route path='*' element={<Login />} />
-          </Routes>
-        </BrowserRouter>
-      </ConfigProvider>
-    </Provider>
+    <ConfigProvider prefixCls='hello'>
+      <Theme />
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Login />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/home' element={<Home />} />
+          <Route path='/home/*' element={<Home />} />
+          <Route path='*' element={<Login />} />
+        </Routes>
+      </BrowserRouter>
+    </ConfigProvider>
   );
 };
 

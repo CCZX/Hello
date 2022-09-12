@@ -17,6 +17,7 @@
     "jsx": "react-jsx",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "types": ["vite-plugin-svg-icons/client"]
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
