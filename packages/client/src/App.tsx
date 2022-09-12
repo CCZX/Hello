@@ -41,6 +41,7 @@ const App: FC<{}> = () => {
             <Route path='/' element={<Login />} />
             <Route path='/login' element={<Login />} />
             <Route path='/home' element={<Home />} />
+            <Route path='/home/*' element={<Home />} />
             <Route path='*' element={<Login />} />
           </Routes>
         </BrowserRouter>

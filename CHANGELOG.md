@@ -31,6 +31,7 @@
 * 初始化: ws 调通, monorepo 包管理 ([6a38162](https://github.com/CCZX/Hello/commit/6a38162efebf74ce8d525150e2df5bd8672a1a64))
 * 更新样式 token ([736dcd1](https://github.com/CCZX/Hello/commit/736dcd15e577888159ab92b95a783f881b9695b3))
 * 注册登录接口调通 ([40b234b](https://github.com/CCZX/Hello/commit/40b234b5b85732d5c62e779de45e15ee8445498e))
+* 生成用户头像 ([a779498](https://github.com/CCZX/Hello/commit/a779498be88d7b0edecc6d034ef6b05b0c87ff2a))
 * 自定义主题 ([4285563](https://github.com/CCZX/Hello/commit/428556386c343f1c9fea953657ddea15d6701887))
 * 返回 accessToken ([ddac53b](https://github.com/CCZX/Hello/commit/ddac53b6db448bc250fff4778628c060b56dda1c))
 * 连接数据库 ([a09a3b5](https://github.com/CCZX/Hello/commit/a09a3b58e7d590a359cbeb7a345e61fdea7f8a2a))

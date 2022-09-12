@@ -1,6 +1,6 @@
 import axios from 'axios';
 import type { AxiosResponse, AxiosInstance, AxiosRequestConfig } from 'axios';
-import { constant } from '@hello/common';
+import { constant, CustomResponseCodeEnum } from '@hello/common';
 import { getAccessToken, saveAccessToken } from './../../../utils/auth';
 
 interface RequestInterceptors {
@@ -52,7 +52,11 @@ class Request {
   private setResponseInterceptors() {
     this.instance.interceptors.response.use(
       (response: AxiosResponse<Response<any>, any>) => {
-        // console.log('gloabl response success', response);
+        console.log('gloabl response success', response);
+        if (response.data.code === CustomResponseCodeEnum.unAuthorization) {
+          window.location.href = `${window.location.origin}/login`;
+          return;
+        }
         if (response.data?.data?.accessToken) {
           saveAccessToken(response.data?.data?.accessToken);
         }

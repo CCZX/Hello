@@ -34,10 +34,13 @@ interface ConversationProps {
  * @returns
  */
 const Conversation: FC<ConversationProps> = (props) => {
-  const { avatar, title } = props;
+  const { avatar, title, onClick } = props;
 
   return (
-    <div className='conversation-container'>
+    <div
+      className='conversation-container'
+      onClick={() => typeof onClick === 'function' && onClick()}
+    >
       <div className='conversation-avatar'>
         <Avatar src={avatar} size={60} shape='square' style={{ borderRadius: 8 }} />
       </div>
