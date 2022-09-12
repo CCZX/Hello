@@ -1,9 +1,10 @@
 import { FC, useState } from 'react';
-import { Button, Input, Tabs } from 'antd';
-import { CreateUserDTO, LoginUserDTO } from '@hello/common';
+import { Button, Input, message, Tabs } from 'antd';
+import { CreateUserDTO, CustomResponseCodeEnum, LoginUserDTO } from '@hello/common';
 import Logo from '../../components/Logo';
 import { create, login } from '../../network/http/uesr';
 import './index.less';
+import { genRandomAvatar } from '../../utils/common';
 
 const { TabPane } = Tabs;
 
@@ -13,12 +14,19 @@ const Login: FC<LoginProps> = (props) => {
   const [loginDTO, setLoginDTO] = useState<LoginUserDTO>({} as LoginUserDTO);
   const [createDTO, setCreateDTO] = useState<CreateUserDTO>({} as CreateUserDTO);
 
-  const onLogin = () => {
-    login(loginDTO);
+  const onLogin = async () => {
+    const data = await login(loginDTO);
+    if (data.code === CustomResponseCodeEnum.success) {
+      window.location.href = `${window.location.origin}/home`;
+      return;
+    }
+
+    message.error(data.message);
   };
 
   const onCreate = () => {
-    create(createDTO);
+    const avatar = genRandomAvatar();
+    create({ ...createDTO, avatar });
   };
 
   return (

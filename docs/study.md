@@ -6,6 +6,7 @@
 - [Nest 官方文档](https://docs.nestjs.com/)
 - [typeorm 中文文档](https://typeorm.bootcss.com/)
 - [SQL 菜鸟教程](https://www.runoob.com/sql/sql-tutorial.html)
+- [Mobx](https://cn.mobx.js.org/)
 
 ## 项目
 

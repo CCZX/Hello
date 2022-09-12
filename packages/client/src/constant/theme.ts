@@ -1,5 +1,6 @@
 export const PRESET_BRAND_COLOR = [
-  { key: '#57bd7c', value: '#128c7e' }, // green
+  // { key: '#57bd7c', value: '#57bd7c' }, // green
+  { key: '#128c7e', value: '#128c7e' }, // green
   { key: '#e55d5d', value: '#e55d5d' }, // red
   { key: '#008efa', value: '#1890ff' }, // blue
   { key: '#ff954f', value: '#ff954f' }, // orange

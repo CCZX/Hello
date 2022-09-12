@@ -15,4 +15,7 @@ export class CreateUserDTO implements ICreateUserDTO {
 
   @ApiProperty({ description: '确认用户密码' })
   rePassword: string;
+
+  @ApiProperty({ description: '用户头像' })
+  avatar?: string;
 }

@@ -1,8 +1,9 @@
-# 1.0.0 (2022-09-10)
+# 1.0.0 (2022-09-11)
 
 
 ### Bug Fixes
 
+* **server:** guard 问题 ([73cd96f](https://github.com/CCZX/Hello/commit/73cd96fb065b02e942108710ecbf0de1eb17f695))
 * **server:** modify database name ([216b1b8](https://github.com/CCZX/Hello/commit/216b1b8fc3e565044ed6d158f5231f5182bf1d69))
 
 

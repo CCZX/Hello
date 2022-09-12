@@ -24,6 +24,8 @@ interface ConversationProps {
    * unread message number
    */
   unReadMessage?: number;
+
+  onClick?: () => void;
 }
 
 /**
@@ -32,14 +34,16 @@ interface ConversationProps {
  * @returns
  */
 const Conversation: FC<ConversationProps> = (props) => {
+  const { avatar, title } = props;
+
   return (
     <div className='conversation-container'>
       <div className='conversation-avatar'>
-        <Avatar size={60} shape='square' style={{ borderRadius: 8 }} />
+        <Avatar src={avatar} size={60} shape='square' style={{ borderRadius: 8 }} />
       </div>
       <div className='conversation-content'>
         <div className='conversation-content__left'>
-          <div className='conversation-content__left-title'>title</div>
+          <div className='conversation-content__left-title'>{title}</div>
           <div className='conversation-content__left-message'>message</div>
         </div>
         <div className='conversation-content__right'>
