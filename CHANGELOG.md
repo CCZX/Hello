@@ -1,4 +1,4 @@
-# 1.0.0 (2022-09-11)
+# 1.0.0 (2022-09-12)
 
 
 ### Bug Fixes
@@ -17,8 +17,10 @@
 * change brand color ([ef9f69c](https://github.com/CCZX/Hello/commit/ef9f69cfdf4f765382e16e94fe582c72971f2527))
 * **client:** http 请求携带 token ([8398814](https://github.com/CCZX/Hello/commit/8398814feff0825f17e247bd6d5c66d82beb56dc))
 * **client:** theme mode ([bb64f08](https://github.com/CCZX/Hello/commit/bb64f0876e7c411a89d2a7ad9eb3ae666bb4be60))
+* **docs:** image ([68df800](https://github.com/CCZX/Hello/commit/68df80077a94e033580eee544c42223223bb1eb8))
 * homePage ([b67c673](https://github.com/CCZX/Hello/commit/b67c673d83c9765edec84cbe6045b1616aad661a))
 * login page ([e78f281](https://github.com/CCZX/Hello/commit/e78f2817de598f6f37eb3dc1ab240e7a89d88a01))
+* **server:** add friend ([f8a171c](https://github.com/CCZX/Hello/commit/f8a171cd52eb17ed130d67329d12e4175981c37a))
 * **server:** add group module and friend entity ([4de1dcf](https://github.com/CCZX/Hello/commit/4de1dcfc60b87afec075485a29d5a942d1c3b00a))
 * **server:** create message entity ([7e8f338](https://github.com/CCZX/Hello/commit/7e8f338dc982ea6705f3227a259635301cb86e00))
 * **server:** filter & interceptor ([2a7c253](https://github.com/CCZX/Hello/commit/2a7c253880ef87e12c03c74d5b86c410b1ae76ef))

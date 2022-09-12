@@ -14,11 +14,11 @@ export class FriendService {
   async add(dto: AddFriendDTO) {
     const { userAId, userBId, userCId, addType = AddFriendTypeEnum.search } = dto;
 
-    const exitA = this.friendRepository.findOne({
+    const exitA = await this.friendRepository.findOne({
       where: { user_a_id: userAId, user_b_id: userBId },
     });
 
-    const exitB = this.friendRepository.findOne({
+    const exitB = await this.friendRepository.findOne({
       where: { user_a_id: userBId, user_b_id: userAId },
     });
 
@@ -43,5 +43,37 @@ export class FriendService {
     await this.friendRepository.save(friendEntity2);
 
     return;
+  }
+
+  async get(userId: number) {
+    // const fs = await this.friendRepository.find({
+    //   relations: ['userB'],
+    //   where: { user_a_id: userId }
+    // })
+    // return fs
+
+    // const sql = await this.friendRepository
+    //   .createQueryBuilder('friend')
+    //   .select([
+    //     "friend.id",
+    //     "user.id",
+    //     "user.account",
+    //     "user.name",
+    //     "user.avatar",
+    //   ])
+    //   .leftJoin('friend.userB', 'user')
+    //   .where("friend.user_a_id = :id", { id: userId })
+    //   .getSql()
+
+    // console.log(sql)
+
+    const friends = await this.friendRepository
+      .createQueryBuilder('friend')
+      .select(['friend.id', 'user.id', 'user.account', 'user.name', 'user.avatar'])
+      .leftJoin('friend.userB', 'user')
+      .where('friend.user_a_id = :id', { id: userId })
+      .getMany();
+
+    return friends;
   }
 }

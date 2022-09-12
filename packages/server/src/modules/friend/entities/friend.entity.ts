@@ -1,5 +1,14 @@
 import { AddFriendTypeEnum } from '@hello/common';
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { UserEntity } from 'src/modules/user/entities/user.entity';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  OneToMany,
+  OneToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 
 /**
  * if userA initiates add userB, the databse will record two data,
@@ -64,4 +73,8 @@ export class FriendEntity {
    */
   @Column({ default: AddFriendTypeEnum.search })
   add_type: number;
+
+  @ManyToOne(() => UserEntity)
+  @JoinColumn({ name: 'user_b_id' })
+  userB: UserEntity;
 }
