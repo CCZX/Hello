@@ -19,6 +19,7 @@ export default defineConfig({
       iconDirs: [path.resolve(process.cwd(), 'src/icons')],
       // 指定symbolId格式
       symbolId: 'icon-[dir]-[name]',
+      customDomId: 'hello-svg-icons-container',
     }),
   ],
 });

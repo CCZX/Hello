@@ -15,6 +15,7 @@
 * auth token ([41bea89](https://github.com/CCZX/Hello/commit/41bea896aa03e622184be732386a484153267887))
 * axios 封装 ([6e2dd71](https://github.com/CCZX/Hello/commit/6e2dd71f16547b3d9b6a20384db7e66abad4d098))
 * change brand color ([ef9f69c](https://github.com/CCZX/Hello/commit/ef9f69cfdf4f765382e16e94fe582c72971f2527))
+* **client:** home page routers ([47c06fb](https://github.com/CCZX/Hello/commit/47c06fb782d0202d2d22fa9745c2c59279a974e4))
 * **client:** http 请求携带 token ([8398814](https://github.com/CCZX/Hello/commit/8398814feff0825f17e247bd6d5c66d82beb56dc))
 * **client:** theme mode ([bb64f08](https://github.com/CCZX/Hello/commit/bb64f0876e7c411a89d2a7ad9eb3ae666bb4be60))
 * **docs:** image ([68df800](https://github.com/CCZX/Hello/commit/68df80077a94e033580eee544c42223223bb1eb8))
