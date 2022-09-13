@@ -18,6 +18,7 @@
 * **client:** home page routers ([47c06fb](https://github.com/CCZX/Hello/commit/47c06fb782d0202d2d22fa9745c2c59279a974e4))
 * **client:** http 请求携带 token ([8398814](https://github.com/CCZX/Hello/commit/8398814feff0825f17e247bd6d5c66d82beb56dc))
 * **client:** theme mode ([bb64f08](https://github.com/CCZX/Hello/commit/bb64f0876e7c411a89d2a7ad9eb3ae666bb4be60))
+* **client:** uninstall mobx &  svg-icons ([f9b0def](https://github.com/CCZX/Hello/commit/f9b0defa3cfa7b541a79d7e1d6c2942326df7043))
 * **docs:** image ([68df800](https://github.com/CCZX/Hello/commit/68df80077a94e033580eee544c42223223bb1eb8))
 * homePage ([b67c673](https://github.com/CCZX/Hello/commit/b67c673d83c9765edec84cbe6045b1616aad661a))
 * login page ([e78f281](https://github.com/CCZX/Hello/commit/e78f2817de598f6f37eb3dc1ab240e7a89d88a01))

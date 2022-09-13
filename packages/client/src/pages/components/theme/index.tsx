@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import { ConfigProvider, Radio, Tooltip } from 'antd';
-import { useThemeModeState } from '../../../hooks/useThemeModeState';
-import { useBrandColorState } from '../../../hooks/useThemeColorState';
 import { PRESET_BRAND_COLOR } from '../../../constant/theme';
+import { useGlobalStore } from '../../../store/global';
+import { changeThemeMode, setBrandColor } from '../../../utils/theme';
 import './index.less';
 
 interface ThemeProps {}
@@ -13,9 +13,8 @@ const themeModeList = [
   { label: <Tooltip title='跟随系统'>💻</Tooltip>, value: 'system' },
 ];
 
-const Theme: FC<ThemeProps> = (props) => {
-  const [themeMode, setThemeMode] = useThemeModeState();
-  const [brandColor, setBrandColor] = useBrandColorState();
+const Theme: FC<ThemeProps> = () => {
+  const { themeMode, brandColor } = useGlobalStore();
 
   const onChangeBrandColor = (color: string) => {
     setBrandColor(color);
@@ -43,7 +42,7 @@ const Theme: FC<ThemeProps> = (props) => {
       </div>
       <Radio.Group
         options={themeModeList}
-        onChange={(e) => setThemeMode(e?.target?.value || 'system')}
+        onChange={(e) => changeThemeMode(e?.target?.value || 'system')}
         value={themeMode}
         optionType='button'
         buttonStyle='solid'

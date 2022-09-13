@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { useGlobalStore } from '../../store/global';
 
 interface SvgIconProps {
   name: string;
@@ -8,14 +9,16 @@ interface SvgIconProps {
 }
 
 const SvgIcon: FC<SvgIconProps> = (props) => {
-  const { name, size = 24, color = '#000', opacity = 1 } = props;
+  const { showThemeMode } = useGlobalStore();
 
-  const symbolId = `#icon-${name}`;
+  const defaultColor = showThemeMode === 'dark' ? '#fff' : '#000';
+
+  const { name, size = 24, color = defaultColor, opacity = 1 } = props;
 
   return (
     <div className='svg-icon-container' style={{ display: 'flex', opacity }}>
       <svg width={size} height={size}>
-        <use href={symbolId} fill={color} />
+        <use href={`#icon-${name}`} fill={color} />
       </svg>
     </div>
   );
