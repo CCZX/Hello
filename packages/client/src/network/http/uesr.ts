@@ -1,5 +1,5 @@
 import { CreateUserDTO, LoginUserDTO } from '@hello/common';
-import { post } from './request/methods';
+import { get, post } from './request/methods';
 
 /**
  *
@@ -21,6 +21,18 @@ export function create(dto: CreateUserDTO) {
 export function login(dto: LoginUserDTO) {
   return post<LoginUserDTO, {}>({
     url: '/auth/login',
+    data: dto,
+  });
+}
+
+/**
+ *
+ * @param id
+ * @returns
+ */
+export function getUserInfo(dto?: { id: string }) {
+  return get<{ id: string }, UserInfo>({
+    url: '/user/info',
     data: dto,
   });
 }

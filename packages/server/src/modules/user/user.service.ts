@@ -61,8 +61,16 @@ export class UserService {
   }
 
   async findOneById(id: number) {
-    return this.userRepository.findOne({
+    const userInfo = await this.userRepository.findOne({
       where: { id },
     });
+
+    if (!userInfo) {
+      return {};
+    }
+
+    const { password, ...rest } = userInfo;
+
+    return rest;
   }
 }

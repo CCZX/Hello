@@ -1,4 +1,6 @@
-enum ThemeEnum {
-  light = 'light',
-  dark = 'dark',
+declare interface UserInfo {
+  id: number;
+  account: string;
+  name: string;
+  avatar: string;
 }
