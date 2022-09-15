@@ -23,10 +23,7 @@ const Home: FC<HomeProps> = (props) => {
   return (
     <div className='home-page'>
       <HomeLeftPanel />
-      <Routes>
-        <Route path='/message/:id' element={<HomeMain />} />
-        <Route path='*' element={<Preview />} />
-      </Routes>
+      <HomeMain />
     </div>
   );
 };

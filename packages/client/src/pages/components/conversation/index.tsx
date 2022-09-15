@@ -2,12 +2,13 @@ import { FC } from 'react';
 import { Avatar } from 'antd';
 import { Message } from '@hello/common';
 import './index.less';
+import { formatAvatar } from '../../../utils/common';
 
 interface ConversationProps {
   /**
    * your firend id
    */
-  id: string;
+  id: string | number;
   /**
    * user or group avatar
    */
@@ -42,7 +43,7 @@ const Conversation: FC<ConversationProps> = (props) => {
       onClick={() => typeof onClick === 'function' && onClick()}
     >
       <div className='conversation-avatar'>
-        <Avatar src={avatar} size={60} shape='square' style={{ borderRadius: 8 }} />
+        <Avatar src={formatAvatar(avatar)} size={60} shape='square' style={{ borderRadius: 8 }} />
       </div>
       <div className='conversation-content'>
         <div className='conversation-content__left'>

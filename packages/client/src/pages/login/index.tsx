@@ -52,6 +52,7 @@ const Login: FC<LoginProps> = (props) => {
                   placeholder='密码'
                   value={loginDTO.password}
                   onChange={(v) => setLoginDTO({ ...loginDTO, password: v.target.value })}
+                  onKeyDown={(e) => e.key === 'Enter' && onLogin()}
                 />
               </div>
               <div className='item'>

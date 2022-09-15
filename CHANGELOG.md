@@ -1,4 +1,4 @@
-# 1.0.0 (2022-09-13)
+# 1.0.0 (2022-09-14)
 
 
 ### Bug Fixes
@@ -19,6 +19,7 @@
 * **client:** http 请求携带 token ([8398814](https://github.com/CCZX/Hello/commit/8398814feff0825f17e247bd6d5c66d82beb56dc))
 * **client:** theme mode ([bb64f08](https://github.com/CCZX/Hello/commit/bb64f0876e7c411a89d2a7ad9eb3ae666bb4be60))
 * **client:** uninstall mobx &  svg-icons ([f9b0def](https://github.com/CCZX/Hello/commit/f9b0defa3cfa7b541a79d7e1d6c2942326df7043))
+* **client:** 使用 zustand 管理 theme ([4fc9f00](https://github.com/CCZX/Hello/commit/4fc9f00eaf47c158c5e510d5edbe9dd3f353e1b2))
 * **client:** 自定义 svg-icon 组件 ([fd9e86d](https://github.com/CCZX/Hello/commit/fd9e86d37725c3c9e866c6c43d074faa04901fd3))
 * **docs:** image ([68df800](https://github.com/CCZX/Hello/commit/68df80077a94e033580eee544c42223223bb1eb8))
 * homePage ([b67c673](https://github.com/CCZX/Hello/commit/b67c673d83c9765edec84cbe6045b1616aad661a))

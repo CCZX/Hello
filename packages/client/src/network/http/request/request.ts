@@ -52,7 +52,7 @@ class Request {
   private setResponseInterceptors() {
     this.instance.interceptors.response.use(
       (response: AxiosResponse<Response<any>, any>) => {
-        console.log('gloabl response success', response);
+        // console.log('gloabl response success', response);
         if (response.data.code === CustomResponseCodeEnum.unAuthorization) {
           window.location.href = `${window.location.origin}/login`;
           return;

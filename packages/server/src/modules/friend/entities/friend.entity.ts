@@ -76,5 +76,5 @@ export class FriendEntity {
 
   @ManyToOne(() => UserEntity)
   @JoinColumn({ name: 'user_b_id' })
-  userB: UserEntity;
+  info: UserEntity;
 }

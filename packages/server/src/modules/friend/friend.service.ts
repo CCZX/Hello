@@ -61,7 +61,7 @@ export class FriendService {
     //     "user.name",
     //     "user.avatar",
     //   ])
-    //   .leftJoin('friend.userB', 'user')
+    //   .leftJoin('friend.info', 'user')
     //   .where("friend.user_a_id = :id", { id: userId })
     //   .getSql()
 
@@ -70,7 +70,7 @@ export class FriendService {
     const friends = await this.friendRepository
       .createQueryBuilder('friend')
       .select(['friend.id', 'user.id', 'user.account', 'user.name', 'user.avatar'])
-      .leftJoin('friend.userB', 'user')
+      .leftJoin('friend.info', 'user')
       .where('friend.user_a_id = :id', { id: userId })
       .getMany();
 
