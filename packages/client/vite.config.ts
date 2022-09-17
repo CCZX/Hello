@@ -22,4 +22,10 @@ export default defineConfig({
       customDomId: 'hello-svg-icons-container',
     }),
   ],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+      '@components': path.resolve(__dirname, 'src/components'),
+    },
+  },
 });
