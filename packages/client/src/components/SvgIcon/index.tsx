@@ -13,12 +13,12 @@ const SvgIcon: FC<SvgIconProps> = (props) => {
 
   const defaultColor = showThemeMode === 'dark' ? '#fff' : '#000';
 
-  const { name, size = 24, color = defaultColor, opacity = 1 } = props;
+  const { name, size = 24, color, opacity = 1 } = props;
 
   return (
     <div className='svg-icon-container' style={{ display: 'flex', opacity }}>
       <svg width={size} height={size}>
-        <use href={`#icon-${name}`} fill={color} />
+        <use href={`#icon-${name}`} fill={color || defaultColor} />
       </svg>
     </div>
   );
