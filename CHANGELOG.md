@@ -25,6 +25,7 @@
 * **docs:** image ([68df800](https://github.com/CCZX/Hello/commit/68df80077a94e033580eee544c42223223bb1eb8))
 * homePage ([b67c673](https://github.com/CCZX/Hello/commit/b67c673d83c9765edec84cbe6045b1616aad661a))
 * login page ([e78f281](https://github.com/CCZX/Hello/commit/e78f2817de598f6f37eb3dc1ab240e7a89d88a01))
+* rightMenu ([e412f52](https://github.com/CCZX/Hello/commit/e412f5237499dc950b0f1fcd36e3589f32b5f440))
 * **server:** add friend ([f8a171c](https://github.com/CCZX/Hello/commit/f8a171cd52eb17ed130d67329d12e4175981c37a))
 * **server:** add group module and friend entity ([4de1dcf](https://github.com/CCZX/Hello/commit/4de1dcfc60b87afec075485a29d5a942d1c3b00a))
 * **server:** create message entity ([7e8f338](https://github.com/CCZX/Hello/commit/7e8f338dc982ea6705f3227a259635301cb86e00))
