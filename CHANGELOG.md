@@ -1,4 +1,4 @@
-# 1.0.0 (2022-09-17)
+# 1.0.0 (2022-09-18)
 
 
 ### Bug Fixes
@@ -15,6 +15,8 @@
 * auth token ([41bea89](https://github.com/CCZX/Hello/commit/41bea896aa03e622184be732386a484153267887))
 * axios 封装 ([6e2dd71](https://github.com/CCZX/Hello/commit/6e2dd71f16547b3d9b6a20384db7e66abad4d098))
 * change brand color ([ef9f69c](https://github.com/CCZX/Hello/commit/ef9f69cfdf4f765382e16e94fe582c72971f2527))
+* **client:** alias 配置 ([a376348](https://github.com/CCZX/Hello/commit/a3763485406e659a60389c598f8ab36131d9e275))
+* **client:** chat 基本结构 ([13d2fd6](https://github.com/CCZX/Hello/commit/13d2fd63be779b1ff66df6894dcf2fb1a57926d6))
 * **client:** home page routers ([47c06fb](https://github.com/CCZX/Hello/commit/47c06fb782d0202d2d22fa9745c2c59279a974e4))
 * **client:** http 请求携带 token ([8398814](https://github.com/CCZX/Hello/commit/8398814feff0825f17e247bd6d5c66d82beb56dc))
 * **client:** theme mode ([bb64f08](https://github.com/CCZX/Hello/commit/bb64f0876e7c411a89d2a7ad9eb3ae666bb4be60))

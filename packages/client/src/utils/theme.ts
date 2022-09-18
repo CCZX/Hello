@@ -60,7 +60,7 @@ export function changeThemeMode(mode?: ThemeMode) {
     setCurrentThemeMode(mode);
   }
 
-  mode = mode || 'system';
+  mode = getCurrentThemeMode() || 'system';
 
   let attrValue = mode;
 

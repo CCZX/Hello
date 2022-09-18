@@ -8,8 +8,8 @@ import './index.less';
 interface ThemeProps {}
 
 const themeModeList = [
-  { label: <Tooltip title='浅色'>☀️</Tooltip>, value: 'light' },
-  { label: <Tooltip title='深色'>🌛</Tooltip>, value: 'dark' },
+  { label: <Tooltip title='明亮'>☀️</Tooltip>, value: 'light' },
+  { label: <Tooltip title='黑暗'>🌛</Tooltip>, value: 'dark' },
   { label: <Tooltip title='跟随系统'>💻</Tooltip>, value: 'system' },
 ];
 
